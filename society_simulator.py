@@ -175,5 +175,5 @@ st.table(df.iloc[-1:].T.rename(columns={df.index[-1]: "Value"}))
 
 st.subheader("Event Log")
 for year, event in enumerate(society.event_log, start=1): # changed tick to year
-    st.markdown(f"**Year {year:.1f}**:  {event['description']}") # removed tick
+    st.markdown(f"**Year {year:.0f}**:  {event['description']}") # removed tick
     st.markdown(f"<span style='color: gray;'>  - Effects: {event['effects']}</span>", unsafe_allow_html=True)
